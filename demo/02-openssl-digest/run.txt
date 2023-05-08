@@ -1,0 +1,35 @@
+========================= bash cell | digest of a file =========================
+
+openssl dgst -sha256 data/message.txt | cut -d" " -f 2
+
+--------------------------------- cell outputs ---------------------------------
+ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+======= bash cell | create tro declaration containing the digest of data =======
+
+# Create tro.jsonld
+cat > products/tro.jsonld << EOF
+{
+    "@context": [{
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "trov": "https://w3id.org/trace/2022/10/trov#"
+    }],
+
+    "@graph": [{
+
+        "@id": "trov:tro/01",
+        "@type": "trov:ResearchObject",
+
+        "trov:generatedBySystem": { "@id": "trov:system/01" },
+        "trov:digest": "ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d",
+        "trov:troFilePath": "products/message.tar.gz"
+    }]
+}
+EOF
+
+--------------------------------- cell outputs ---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+

@@ -1,0 +1,18 @@
+==================== bash cell | generate a rsa private key ====================
+
+# 2048-bit key, saved to file named private.pem
+openssl genrsa -out products/private.pem 2048
+
+--------------------------------- cell outputs ---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+====================== bash cell | generate a public key =======================
+
+# Use the rsa option to produce a public version of your private RSA key
+openssl rsa -in products/private.pem -pubout > products/public.pem
+
+--------------------------------- cell outputs ---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
