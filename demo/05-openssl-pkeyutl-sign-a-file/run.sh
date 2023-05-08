@@ -17,7 +17,7 @@ END_CELL
 
 # ------------------------------------------------------------------------------
 
-bash_cell 'sign a file' << END_CELL
+bash_cell 'verify a file' << END_CELL
 
 openssl pkeyutl -verify -in ${MESSAGE_FILE} -sigfile ${MESSAGE_SIGNATURE_FILE} -pubin -inkey ${PUBLIC_KEY_FILE}
 

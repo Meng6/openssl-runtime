@@ -12,7 +12,7 @@ END_CELL
 
 bash_cell 'show openssl help' << END_CELL
 
-openssl dgst -h
+openssl dgst -h 2>&1
 
 END_CELL
 

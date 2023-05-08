@@ -4,7 +4,7 @@ PRIVATE_KEY_FILE=data/private.pem
 PUBLIC_KEY_FILE=data/public.pem
 
 MESSAGE_FILE=data/message.txt
-SIGNED_MESSAGE_FILE=products/message.txt.sha1
+SIGNED_MESSAGE_FILE=products/message.txt.sha256
 
 # ------------------------------------------------------------------------------
 

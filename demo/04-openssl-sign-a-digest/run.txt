@@ -1,6 +1,6 @@
 ====================== bash cell | sign a tro declaration ======================
 
-openssl dgst -sha256   -sign data/private.pem   -out products/message.txt.sha1   data/message.txt
+openssl dgst -sha256   -sign data/private.pem   -out products/message.txt.sha256   data/message.txt
 
 --------------------------------- cell outputs ---------------------------------
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -8,7 +8,7 @@ openssl dgst -sha256   -sign data/private.pem   -out products/message.txt.sha1  
 
 ================ bash cell | verify the signed tro declaration =================
 
-openssl dgst -sha256   -verify data/public.pem   -signature products/message.txt.sha1   data/message.txt
+openssl dgst -sha256   -verify data/public.pem   -signature products/message.txt.sha256   data/message.txt
 
 --------------------------------- cell outputs ---------------------------------
 Verified OK

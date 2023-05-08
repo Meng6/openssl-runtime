@@ -6,7 +6,7 @@ TRO_JSONLD_FILE=products/tro.jsonld
 
 bash_cell 'digest of a file' << END_CELL
 
-openssl dgst -sha256 data/message.txt | cut -d" " -f 2
+openssl dgst -sha256 data/message.txt
 
 END_CELL
 

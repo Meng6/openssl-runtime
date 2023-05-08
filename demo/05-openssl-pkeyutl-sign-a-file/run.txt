@@ -6,7 +6,7 @@ openssl pkeyutl -sign -in data/message.txt -inkey data/private.pem -out products
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-=========================== bash cell | sign a file ============================
+========================== bash cell | verify a file ===========================
 
 openssl pkeyutl -verify -in data/message.txt -sigfile products/message.sig -pubin -inkey data/public.pem
 

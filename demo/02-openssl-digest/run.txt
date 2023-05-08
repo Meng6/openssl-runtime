@@ -1,9 +1,9 @@
 ========================= bash cell | digest of a file =========================
 
-openssl dgst -sha256 data/message.txt | cut -d" " -f 2
+openssl dgst -sha256 data/message.txt
 
 --------------------------------- cell outputs ---------------------------------
-ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d
+SHA2-256(data/message.txt)= ab530a13e45914982b79f9b7e3fba994cfd1f3fb22f71cea1afbf02b460c6d1d
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
